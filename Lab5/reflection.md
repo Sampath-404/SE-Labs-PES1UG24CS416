@@ -1,7 +1,7 @@
 # Reflection – SAMPATH (PES1UG24CS416)
 
 **1. Which tool found the most issues, and which was most useful?**
-Pylint reported the most (about 35 messages, score 4.10/10). Bandit was the most important, because it found the two High severity security flaws (`os.system` and MD5) and the `eval` call. Flake8 mostly confirmed style problems Pylint had already caught.
+Pylint reported the most (about 36 messages, score 4.10/10). Bandit was the most important, because it found the two High severity security flaws (`os.system` and MD5) and the `eval` call. Flake8 mostly confirmed style problems Pylint had already caught.
 
 **2. Did you find any false positives or issues the tools missed?**
 Bandit flagged `random` for a parking PIN. The risk is low, but `secrets` was an easy fix. The tools missed the hardcoded gate key (it is printed to the console) and the missing validation of `hours_booked`. I found these only by reading the code.
