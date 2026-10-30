@@ -4,9 +4,15 @@ import os
 import secrets
 
 PARKING_SLOTS = {
-    "P01": {"plate": "KA01AB1234", "hours": 2, "rate": 20.0, "is_occupied": True},
-    "P02": {"plate": "TN07CD5678", "hours": 0, "rate": 20.0, "is_occupied": False},
-    "P03": {"plate": "MH02EF9012", "hours": 4, "rate": 30.0, "is_occupied": True},
+    "P01": {
+        "plate": "KA01AB1234", "hours": 2, "rate": 20.0, "is_occupied": True
+    },
+    "P02": {
+        "plate": "TN07CD5678", "hours": 0, "rate": 20.0, "is_occupied": False
+    },
+    "P03": {
+        "plate": "MH02EF9012", "hours": 4, "rate": 30.0, "is_occupied": True
+    },
 }
 
 STATS = {"total_collections": 0.0}
@@ -97,4 +103,5 @@ def main():
     print("Barrier Key configured:", bool(gate_barrier_key))
 
 
-main()
+if __name__ == "__main__":
+    main()
